@@ -23,7 +23,7 @@
   </intent>
 </queries>
    <application
-        android:label="frontend_flutter"
+        android:label="Frida"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

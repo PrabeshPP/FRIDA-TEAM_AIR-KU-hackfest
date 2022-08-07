@@ -1,10 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:frontend_flutter/views/Alerts/Alerts_page.dart';
+import 'package:frontend_flutter/views/floods/floods_page.dart';
+import 'package:frontend_flutter/views/funds/funds_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../events/events_page.dart';
-import '../funds/funds_page.dart';
 import '../news/news_page.dart';
 import 'components/personalized_component.dart';
 
@@ -32,7 +33,7 @@ const lists = [
   {
     "name": "Funds",
     "iconData": Icons.attach_money_rounded,
-    "route": FundsScreen(),
+    "route": FundsPage(),
     "colors": [
       Color.fromARGB(255, 24, 40, 72),
       Color.fromARGB(255, 75, 107, 183)
@@ -325,9 +326,9 @@ Widget sideDrawer(context) {
         drawerItem(const HomeScreen(), size, context, Icons.home, "Home"),
         drawerItem(const NewsScreen(), size, context, Icons.newspaper, "News"),
         drawerItem(const EventsScreen(), size, context, Icons.event, "Events"),
-        drawerItem(const FundsScreen(), size, context,
+        drawerItem(const FundsPage(), size, context,
             Icons.attach_money_rounded, "Fundraise"),
-        // drawerItem(size, context, Icons.flood, "Flood Near me"),
+        drawerItem(const FloodsPage(),size, context, Icons.flood, "Flood Near me"),
         // drawerItem(size, context, Icons.landslide, "Landslide Near me"),
       ],
     ),

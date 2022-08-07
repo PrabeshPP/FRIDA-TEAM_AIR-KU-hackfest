@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:frontend_flutter/model/funds/funds.dart';
-import 'package:frontend_flutter/services/funds/funds_repo.dart';
+import 'package:flutter/src/foundation/key.dart';
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:frontend_flutter/model/floods/floods.dart';
+import 'package:frontend_flutter/services/floods/floods_repository.dart';
 
-class FundsPage extends StatefulWidget {
-  const FundsPage({Key? key}) : super(key: key);
+class FloodsPage extends StatefulWidget {
+  const FloodsPage({Key? key}) : super(key: key);
 
   @override
-  State<FundsPage> createState() => _FundsPageState();
+  State<FloodsPage> createState() => _FloodsPageState();
 }
 
-class _FundsPageState extends State<FundsPage> {
-  FundsRepository eventsRepository = FundsRepository();
-  List<Funds>? listEvents = [];
+class _FloodsPageState extends State<FloodsPage> {
+  FloodsRepository eventsRepository = FloodsRepository();
+  List<Floods>? listEvents = [];
   @override
   void initState() {
     super.initState();
@@ -28,14 +30,14 @@ class _FundsPageState extends State<FundsPage> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title:const Text("Funds"),
+        title: Text("Floods"),
       ),
       body: SizedBox(
           width: size.width,
           child: ListView.builder(
             itemCount: listEvents!.length,
             itemBuilder: ((context, index) {
-              Funds news = listEvents![index];
+              Floods news = listEvents![index];
               return Padding(
                 padding: EdgeInsets.symmetric(
                     vertical: size.height * 0.02,
@@ -64,7 +66,7 @@ class _FundsPageState extends State<FundsPage> {
                             width: size.width * 0.8,
                             height: size.height * 0.2 * 0.2,
                             child: Text(
-                              news.Title,
+                              news.riverName,
                               style: Theme.of(context)
                                   .textTheme
                                   .titleLarge!
@@ -80,7 +82,7 @@ class _FundsPageState extends State<FundsPage> {
                           child: SizedBox(
                             width: size.width * 0.8,
                             child: Text(
-                              news.Title,
+                              news.message,
                               maxLines: 4,
                               softWrap: false,
                               overflow: TextOverflow.ellipsis,
@@ -98,15 +100,15 @@ class _FundsPageState extends State<FundsPage> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              // Text(
-                              //   "Water Level:${news.waterLevel}",
-                              //   style: Theme.of(context)
-                              //       .textTheme
-                              //       .bodyMedium!
-                              //       .copyWith(
-                              //           color: Colors.black,
-                              //           fontWeight: FontWeight.bold),
-                              // ),
+                              Text(
+                                "Water Level:${news.waterLevel}",
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .bodyMedium!
+                                    .copyWith(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold),
+                              ),
                             ],
                           ),
                         )

@@ -1,0 +1,33 @@
+{
+    "floods":[
+        {
+            "riverName":"Chamelia at Karkale Gaun",
+            "waterLevel": 6.991550506361411,
+            "message": "Stay alert high chance of flood"
+        },
+        {
+            "riverName":"Tamolriver at Mulghat",
+            "waterLevel": 9.03618965949196,
+            "message": "Stay alert high chance of flood"
+        },
+        {
+            "riverName":"Surnaya Gad at Gajur Gaon",
+            "waterLevel": 2.733938687512245,
+            "message": "Stay alert high chance of flood"
+        },
+        {
+            "riverName":"Mahakali at Parigaon",
+            "waterLevel": 5.339436659076578,
+            "message": "Stay alert high chance of flood"
+        },
+        {
+            "riverName":"Khutiya khola at Mudibhar",
+            "waterLevel": 1.7442816976294027,
+            "message": "Stay alert high chance of flood"
+        }
+        
+       
+    ]
+}
+
+
